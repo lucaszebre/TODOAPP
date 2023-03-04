@@ -1,0 +1,83 @@
+.CenterContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.CenterWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: scroll;
+    height: 439px;
+    width: 521px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 0.3em;
+}
+.CenterBottom{
+    cursor: pointer;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 521px;
+    height: 70px;
+    padding: 0 1em;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 4em;
+}
+.supp,.search{
+    color: rgb(246, 181, 181);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.supp:hover , .search:hover{
+    color: rgb(255, 168, 168);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.CenterBottomWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+   
+}
+
+
+@media screen and (max-width: 541px) {
+    .CenterWrapper{
+        width: 85%;
+    }
+    .CenterBottom{
+        width: 85%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+        
+    }
+    .CenterBottomWrapper{
+        width: 100%;
+        flex-direction:row;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+
+    .CenterBottomWrapper p{
+        margin-bottom: 1em;
+        margin-right: 0.5em;
+    }
+    
+}

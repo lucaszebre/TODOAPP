@@ -1,0 +1,30 @@
+.App{
+  width: 100%;
+}
+
+@media  (min-width:768px) {
+  .Bg-Mobile{
+    display: none;
+  }
+  .Bg-Desktop{
+    display: block;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  height: 300px;
+  }
+}
+
+@media (max-width:768px) {
+  .Bg-Mobile{
+    display: block;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  height: 200px;
+  }
+  .Bg-Desktop{
+    display: none;
+  }
+}
+  

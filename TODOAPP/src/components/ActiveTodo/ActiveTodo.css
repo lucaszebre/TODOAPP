@@ -1,0 +1,38 @@
+.ActiveTodoContainer{
+    margin-top: 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding-left: 1em;
+    background-color: WHITE;
+    border-bottom: 2px solid #b3b3b3;
+    padding-bottom: 0.5em;
+}
+
+.checktodo{
+    border-radius: 50%;
+    margin-right: 1em;
+    height: 1rem;
+    width: 1rem;
+}
+
+.TextTodoActive{
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #3B3B3B;
+    width: 100%;
+}
+
+@media  (max-width: 541px) {
+    .TextTodoActive{
+        font-size: 2.8vw;
+        font-weight: 500;
+        color: #3B3B3B;
+        width: 100%;
+    }
+    
+} 
