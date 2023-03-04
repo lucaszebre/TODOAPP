@@ -60,7 +60,7 @@ const ContextTodo= (props) => {
                         return tasks.filter(task => task.text.toLowerCase().includes(searchTerm.toLowerCase()));
                     }
                     const [text, setText] = useState('');
-
+                    const [priority, setPriority] = useState('low');
                     
     const ValueTodo ={
         tasks,
@@ -70,7 +70,8 @@ const ContextTodo= (props) => {
     toggleTaskDone,
     filterTasks,
     search, setSearch,
-    text, setText
+    text, setText,
+    priority, setPriority
 
     }
     return (

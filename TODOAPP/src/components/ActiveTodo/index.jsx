@@ -18,7 +18,7 @@ const ActiveTodo = (props) => {
     <div className="ActiveTodoContainer">
         <input className='checktodo'   checked={props.taskdone 
         } onChange={() => Onchange()}
-        type="checkbox" /> <p className='TextTodoActive'>{props.text}</p>
+        type="checkbox" /> <p className='TextTodoActive'>{props.text} - {props.priority}</p>
     </div>
     )
 }

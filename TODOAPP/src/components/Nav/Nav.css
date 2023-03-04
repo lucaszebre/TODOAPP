@@ -18,6 +18,41 @@
     border: none;
     color: WHITE;
 }
+
+.NavPriority{
+    right: 4.2rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60px;
+    height: 62px;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    color: WHITE;
+}
+
+.NavSelect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60px;
+    height: 62px;
+    border-radius: 10px;
+    padding: 10px;
+    color: #ff8585;
+    
+}
+
+.NavOption{
+    padding: 1em;
+    border-radius: 10px;
+    background-color: #ff8585;
+    color: white;
+}
 .NavWrapper{
     width: 541px;
     display: flex;

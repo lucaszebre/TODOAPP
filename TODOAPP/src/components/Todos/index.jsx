@@ -4,17 +4,35 @@ import { TodoContext } from '../ContextTodo';
 import ActiveTodo from '../ActiveTodo';
 
 
+
 function Todos() {
     const { tasks, deleteTask, toggleTaskDone ,filterTasks,Search,text, setText } = useContext(TodoContext);
     
+    
+        function sortTasksByPriority(tasks) {
+
+            return tasks.sort((a, b) => {
+            const priorityOrder = {
+                high: 3,
+                medium: 2,
+                low: 1,
+            };
+            return priorityOrder[b.priority] - priorityOrder[a.priority];
+            });
+        }
+        
+        
+  const SortTask = sortTasksByPriority(tasks);
+    console.log(tasks)
         return (
         <>
-            {tasks.map(task => (
+            {SortTask.map(task => (
             <ActiveTodo
                 id={task.id}
                 taskdone={task.done}
                 text={task.text}
                 key={task.id}
+                priority={task.priority}
                 
             />
             ))}

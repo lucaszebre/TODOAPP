@@ -3,7 +3,7 @@ import { TodoContext} from '../ContextTodo';
 import './Nav.css'
 const Nav = () => {
 
-const { addTask , filterTasks ,text, setText,search, setSearch, } = useContext(TodoContext);
+const { addTask , filterTasks ,text, setText,search, setSearch,priority, setPriority } = useContext(TodoContext);
 const [searchTerm, setSearchTerm] = useState('');
 
 
@@ -16,8 +16,10 @@ function handleSearch(text) {
     function handleSubmit(text) {
     
         if (text) {
-        addTask({ id: Date.now(), text, done: false });
+        addTask({ id: Date.now(), text, done: false , priority : priority});
+        setPriority('low');
         setText('');
+        setSearch(false);
         }
     }
     return (
@@ -30,6 +32,14 @@ function handleSearch(text) {
             
                 <form className="NavBlock2">
                     <input className='Bar' value={text} onChange={(e)=> handleSearch(e.target.value)} placeholder='create a new todo' type="text" maxLength={50} />
+                    <label className='NavPriority'>
+                       
+                        <select className='NavSelect' value={priority} onChange={(e) => setPriority(e.target.value)}>
+                            <option className='NavOption' value="low">Low</option>
+                            <option className='NavOption' value="medium">Medium</option>
+                            <option className='NavOption' value="high">High</option>
+                        </select>
+                        </label>
                     <div className="option-nav">
                         <button onClick={()=> handleSubmit(text)} className='add'>ADD</button>
                         {/* <button onClick={()=> handleSearch(text)}  className='search'>SEARCH</button> */}
