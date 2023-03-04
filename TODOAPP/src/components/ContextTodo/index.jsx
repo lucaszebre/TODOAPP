@@ -4,10 +4,10 @@ export const TodoContext = createContext()
 
 const ContextTodo= (props) => {
 
-     // state pour les tâches
+     
 
     const getInitialState = () => {
-        const storageState = localStorage.getItem('tasks');
+        const storageState = localStorage.getItem('tasks'); // get the saved data from localstorage (if any)
         if (storageState) {
             return JSON.parse(storageState);
         } else {

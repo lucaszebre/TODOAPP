@@ -4,17 +4,16 @@ import './Nav.css'
 const Nav = () => {
 
 const { addTask , filterTasks ,text, setText,search, setSearch,priority, setPriority } = useContext(TodoContext);
-const [searchTerm, setSearchTerm] = useState('');
+const [searchTerm, setSearchTerm] = useState(''); // pour la recherche
 
 
-function handleSearch(text) {
+function handleSearch(text) { // fonction pour la recherche
     setText(text);
     setSearchTerm(text);
     filterTasks(searchTerm);
     setSearch(true);
 }
-    function handleSubmit(text) {
-    
+    function handleSubmit(text) { // fonction pour ajouter une tâche
         if (text) {
         addTask({ id: Date.now(), text, done: false , priority : priority});
         setPriority('low');

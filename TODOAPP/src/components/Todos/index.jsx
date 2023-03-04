@@ -9,14 +9,14 @@ function Todos() {
     const { tasks, deleteTask, toggleTaskDone ,filterTasks,Search,text, setText } = useContext(TodoContext);
     
     
-        function sortTasksByPriority(tasks) {
-
-            return tasks.sort((a, b) => {
-            const priorityOrder = {
-                high: 3,
-                medium: 2,
-                low: 1,
+    function sortTasksByPriority(tasks) { // fonction pour trier les tâches par priorité
+        const priorityOrder = {
+            high: 3,
+            medium: 2,
+            low: 1,
             };
+        
+            return  Array.from(tasks).sort((a, b) => {
             return priorityOrder[b.priority] - priorityOrder[a.priority];
             });
         }

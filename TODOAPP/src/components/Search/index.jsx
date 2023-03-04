@@ -7,7 +7,7 @@ import ActiveTodo from '../ActiveTodo';
 function Search() {
     const { tasks, deleteTask, toggleTaskDone ,filterTasks,Search,text, setText } = useContext(TodoContext);
     
-        return (
+        return ( 
         <>
             {filterTasks(text).map(task => (
             <ActiveTodo
