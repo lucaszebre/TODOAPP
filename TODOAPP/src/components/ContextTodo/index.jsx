@@ -11,10 +11,7 @@ const ContextTodo= (props) => {
         if (storageState) {
             return JSON.parse(storageState);
         } else {
-            return {
-                tasks: [],
-                
-            };
+            return [];
         }
         };
         const [tasks, setTasks] = useState(getInitialState);
